@@ -1,1 +1,32 @@
-<p>register works!</p>
+<div class="global-wrapper">
+  <div class="global-header">Register User</div>
+  <button mat-flat-button routerLink="/dashboard">
+    Return
+  </button>
+
+  <form class="register-form">
+    <mat-form-field class="full-width">
+      <mat-label>Username</mat-label>
+      <input
+        type="text"
+        matInput
+        [formControl]="usernameFormControl"
+        placeholder="i.e. bob-fornal"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="emailFormControl"
+        placeholder="i.e. bob@cloudflare-talk.com"
+      />
+    </mat-form-field>
+  </form>
+
+  <button mat-flat-button (click)="save()">
+    Save
+  </button>
+</div>
