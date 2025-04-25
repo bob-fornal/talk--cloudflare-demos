@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CloudflareApiService } from '../../core/services/cloudflare-api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  private readonly apiService = inject(CloudflareApiService);
 
+  data = [];
+
+  async getData(): Promise<void> {
+    const data = await this.apiService.getUsersRegisteredToday();
+    console.log(data);
+  }
 }
