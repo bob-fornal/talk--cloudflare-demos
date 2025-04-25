@@ -13,4 +13,11 @@ body {
   padding: 1em;
   max-width: 45em;
   background-color: silver;
+
+  .global-header {
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 1em;
+    text-align: center;
+  }
 }
