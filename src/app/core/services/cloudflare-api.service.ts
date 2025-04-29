@@ -9,7 +9,7 @@ export class CloudflareApiService {
   private readonly http = inject(HttpClient);
 
   private readonly api_key: string = process.env['AUTH_KEY'] || '';
-  private readonly api_path: string = 'https://database-tool.bob-fornal.workers.dev/api';
+  private readonly api_path: string = 'https://cloudflare-talk-api.bob-fornal.workers.dev/api';
 
   public async getUsersRegisteredToday() {
     const path: string = `${this.api_path}/get-users-registered-today`;

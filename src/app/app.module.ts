@@ -11,6 +11,11 @@ import { RegisterComponent } from './pages/register/register.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { PageComponent } from './pages/page/page.component';
+import { RedirectComponent } from './pages/redirect/redirect.component';
+import { SplitTestComponent } from './pages/split-test/split-test.component';
+import { SetupComponent } from './pages/split-test/setup/setup.component';
+import { CookieComponent } from './pages/cookie/cookie.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,11 @@ import { MatInputModule } from '@angular/material/input';
 
     DashboardComponent,
     RegisterComponent,
+    PageComponent,
+    RedirectComponent,
+    SplitTestComponent,
+    SetupComponent,
+    CookieComponent,
   ],
   imports: [
     BrowserModule,
