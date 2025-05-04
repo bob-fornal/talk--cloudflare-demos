@@ -1,0 +1,41 @@
+.global-wrapper {
+  box-sizing: border-box;
+  
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 1em;
+
+    th, td {
+      padding: 0.5em 1em;
+      border: 1px solid black;
+    }
+  }
+
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1em;
+
+    .header-image {
+      height: 280px;
+
+      .image-placeholder {
+        height: 100%;
+      }
+    }
+    .header-text {
+      position: absolute;
+      align-self: center;
+    }
+  }
+
+  &.show-data-wrappers {
+
+    [data-matcher] {
+      border: 2px solid yellow;
+    }
+  }
+}

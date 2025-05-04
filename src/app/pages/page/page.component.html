@@ -1,23 +1,80 @@
-<div class="global-wrapper">
+<div data-show-data-wrapper class="global-wrapper show-data-wrappers">
   <div class="global-header">Page</div>
 
-  <div data-user-id>[data-user-id]</div>
+  <button mat-flat-button (click)="back()">
+    Back
+  </button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Data Point</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>User ID</td>
+        <td data-matcher="userid">
+          <span>[data-userid]</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="header">
     <div class="header-image">
       @if (imagePath === '') {
-        <div data-image-path>[data-image-path]</div>
+        <div data-matcher="image-path" class="image-placeholder">[data-image-path]</div>
       } @else {
-        <img data-image-path src="" />
+        <img data-matcher="image-path" class="image-placeholder" src="" />
       }
     </div>
-    <div data-header-text class="header-text">[data-header-text]</div>
+    <div data-matcher="header-text" class="header-text">[data-header-text]</div>
   </div>
 
-  <div data-email>[data-email]</div>
-  <div data-city>[data-city]</div>
-  <div data-state>[data-state]</div>
-  <div data-zipcode>[data-ipcode]</div>
-  <div data-ip-address>[data-ip-address]</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Data Point</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Email</td>
+        <td data-matcher="email">
+          <span>[data-email]</span>
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td data-matcher="city">
+          <span>[data-city]</span>
+        </td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td data-matcher="state">
+          <span>[data-state]</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Zipcode</td>
+        <td data-matcher="zipcode">
+          <span>[data-zipcode]</span>
+        </td>
+      </tr>
+      <tr>
+        <td>IP Address</td>
+        <td data-matcher="ip-address">
+          <span>[data-ip-address]</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
+  <button mat-flat-button (click)="back()">
+    Back
+  </button>
 </div>
